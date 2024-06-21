@@ -47,7 +47,7 @@ const Entertainment = () => {
               <img
                 src={
                   ele.urlToImage == null
-                    ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1WdIW2im6TWTKabcsokQuPJtQ7KpWB_z6g&s"
+                    ? "https://img.freepik.com/free-vector/news-report-concept-background-design_1017-14197.jpg?size=626&ext=jpg"
                     : ele.urlToImage
                 }
                 className="card-img-top"

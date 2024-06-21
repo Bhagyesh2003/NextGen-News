@@ -25,5 +25,3 @@ const App = () => {
 };
 
 export default App;
-
-//19cdd0eaab164db7a625c6326ffe6ccb -- NewsAPI key

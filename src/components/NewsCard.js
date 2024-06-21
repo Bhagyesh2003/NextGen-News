@@ -20,7 +20,9 @@ const NewsCard = () => {
     setError(null); // Reset any previous errors
 
     // Determine the API URL based on the presence of a search query
-    let url = `https://newsapi.org/v2/top-headlines?country=in&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+    let url = query
+    ? `https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+    : `https://newsapi.org/v2/top-headlines?country=in&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
     try {
       const res = await fetch(url);
@@ -95,7 +97,7 @@ const NewsCard = () => {
                 <img
                   src={
                     ele.urlToImage == null
-                      ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1WdIW2im6TWTKabcsokQuPJtQ7KpWB_z6g&s"
+                      ? "https://img.freepik.com/free-vector/news-report-concept-background-design_1017-14197.jpg?size=626&ext=jpg"
                       : ele.urlToImage
                   }
                   className="card-img-top"
