@@ -20,8 +20,7 @@ const NewsCard = () => {
     setError(null); // Reset any previous errors
 
     // Determine the API URL based on the presence of a search query
-    let url = query
-      `https://newsapi.org/v2/top-headlines?country=in&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=in&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
     try {
       const res = await fetch(url);
