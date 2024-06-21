@@ -6,7 +6,7 @@ const Business = () => {
 
   const fetchData = async () => {
     let res = await fetch(
-      "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=19cdd0eaab164db7a625c6326ffe6ccb"
+      `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
     );
     let data = await res.json();
     setMyNews(data.articles);

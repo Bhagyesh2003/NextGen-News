@@ -21,8 +21,8 @@ const NewsCard = () => {
 
     // Determine the API URL based on the presence of a search query
     let url = query
-      ? `https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=19cdd0eaab164db7a625c6326ffe6ccb`
-      : `https://newsapi.org/v2/top-headlines?country=in&page=${page}&apiKey=19cdd0eaab164db7a625c6326ffe6ccb`;
+      ? `https://newsapi.org/v2/everything?q=${query}&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+      : `https://newsapi.org/v2/top-headlines?country=in&page=${page}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
     try {
       const res = await fetch(url);

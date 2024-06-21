@@ -9,7 +9,7 @@ const Sports = () => {
 
   const fetchData = async (page) => {
     const res = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&page=${page}&category=sports&apiKey=19cdd0eaab164db7a625c6326ffe6ccb`
+      `https://newsapi.org/v2/top-headlines?country=in&page=${page}&category=sports&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
     );
     const data = await res.json();
     setMyNews(data.articles);
